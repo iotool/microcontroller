@@ -17,6 +17,22 @@
 | Features | USB, DAC, ADC, Temp | ADC |
 | Low Power | 5uA | 20uA |
 
+## CircuitPython
+
+With CircuitPython you can use MicroPython to develop firmware. 
+
+* pre-installed firmware: CircuitPython 7.3.0 on 2022-05-23
+* connect to computer with USB data cable
+* mount new drive "CIRCUITPY" with 940KB
+* edit firmware file \code.py and optional \boot.py
+
+Debug serial output to Putty
+
+* use "zadig-2.7.exe" to install driver "USB Serial (CDC)" at Win7
+* set COM-baud to 115200 at windows device manager
+* set COM-baud tp 115200 at putty serial connection
+
+## Photo
 
 ![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-a.jpg?raw=true)
 

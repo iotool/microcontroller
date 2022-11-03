@@ -15,7 +15,7 @@
 | WiFi | 2.4 GHz | 2.4 GHz |
 | Bluetooth | - | - |
 | Features | USB, DAC, ADC, Temp | ADC |
-| Low Power | 5uA | 20uA |
+| Low Power | 5uA (58uA) | 20uA |
 
 ## CircuitPython
 
@@ -31,6 +31,12 @@ Debug serial output to Putty
 * use "zadig-2.7.exe" to install driver "USB Serial (CDC)" at Win7
 * set COM-baud to 115200 at windows device manager
 * set COM-baud tp 115200 at putty serial connection
+
+Deep Sleep
+
+* 58uA at deep sleep powered by 4.5 VBUS (3x AAA)
+* no extra wire or resistor needed
+* wakeup by time and/or builtin button D0 
 
 ## Photo
 

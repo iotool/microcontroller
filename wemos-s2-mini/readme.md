@@ -35,6 +35,7 @@ With CircuitPython you can use MicroPython to develop firmware.
 * connect to computer with USB data cable
 * mount new drive "CIRCUITPY" with 940KB
 * edit firmware file \code.py and optional \boot.py
+* flash new firmware release [wemos](https://www.wemos.cc/en/latest/tutorials/s2/get_started_with_circuitpython_s2.html)
 
 Debug serial output to Putty
 

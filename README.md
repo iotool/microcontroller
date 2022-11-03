@@ -6,6 +6,7 @@
 | ATtiny85 | Chip | ATtiny85-20PU, 8pin, DIP8 |
 | ATtiny85 | Digispark | USB-HID, MicroUSB |
 | ATtiny85 | Digispark | USB-HID, PCB-USB |
+| ATtiny85 | LilyTinyPad | USB-HID, circular pcb |
 | ATtiny2313a | Chip | ATtiny2313A-PU, 20pin, DIP8 |
 | ESP8266 | ESP-01 | WiFi-AT-MCU |
 | ESP8266 | ESP-01S | WiFi-AT-MCU |

@@ -17,5 +17,6 @@
 | ESP8266 | Chip | ESP-07, ext antenna |
 | ESP8266 | Chip | ESP-12N, only 1MB flash |
 | ESP8285 | Pinout | ESP-M3, 2.54mm |
+| ESP32-S2 | WeMos S2 mini | ESP32-S2, CircuitPython, RST/Boot |
 | ESP32 | ESP32 Dev | ESP-32S, RST/Flash, BTLE |
 

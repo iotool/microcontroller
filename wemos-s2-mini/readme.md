@@ -17,6 +17,16 @@
 | Features | USB, DAC, ADC, Temp | ADC |
 | Low Power | 5uA (58uA) | 20uA |
 
+builtin features
+
+* push button as input (long, short)
+* blue led as output (blink, morse)
+* wifi access point / webserver (app)
+* wifi station / mesh (iot)
+* usb hid / storage (keyboard, memory)
+* flash memory (filesystem, logging)
+* temperature sensor
+
 ## CircuitPython
 
 With CircuitPython you can use MicroPython to develop firmware. 

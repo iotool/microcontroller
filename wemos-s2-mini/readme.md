@@ -37,6 +37,9 @@ Deep Sleep
 * 58uA at deep sleep powered by 4.5 VBUS (3x AAA)
 * no extra wire or resistor needed
 * wakeup by time and/or builtin button D0 
+* 80uA average messure 1 second every 60 minutes = 312 days @600mAh
+* 180uA average messure 1 second every 10 minutes = 138 days @600mAh
+* 1,25mA average messure 1 second every 1 minute = 20 days @600mAh
 
 ## Photo
 

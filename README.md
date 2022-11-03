@@ -8,6 +8,10 @@
 | ATtiny85 | Digispark | USB-HID, PCB-USB |
 | ATtiny85 | LilyTinyPad | USB-HID, circular pcb |
 | ATtiny2313a | Chip | ATtiny2313A-PU, 20pin, DIP8 |
+| ATmega328P | Arduino Uno R3 | RST, LED |
+| ATmega328P | Arduino Nano 3 | RST, LED |
+| ATmega328P | Arduino Nano Pro Mini | without USB, RST |
+| ATmega32U4 | BadUSB Beetle | USB-HID, USB-Stick |
 | ESP8266 | ESP-01 | WiFi-AT-MCU |
 | ESP8266 | ESP-01S | WiFi-AT-MCU |
 | ESP8266 | WeMos D1 mini | ESP-12F, RST |

@@ -2,6 +2,11 @@
 
 | MCU | Board | Comment |
 | --- | --- | --- |
+| ATtiny13a | Chip | ATtiny13A-PU, 8pin, DIP8 |
+| ATtiny85 | Chip | ATtiny85-20PU, 8pin, DIP8 |
+| ATtiny85 | Digispark | USB-HID, MicroUSB |
+| ATtiny85 | Digispark | USB-HID, PCB-USB |
+| ATtiny2313a | Chip | ATtiny2313A-PU, 20pin, DIP8 |
 | ESP8266 | ESP-01 | WiFi-AT-MCU |
 | ESP8266 | ESP-01S | WiFi-AT-MCU |
 | ESP8266 | WeMos D1 mini | ESP-12F, RST |

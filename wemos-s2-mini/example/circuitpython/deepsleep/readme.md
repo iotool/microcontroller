@@ -35,3 +35,14 @@ average consumption
 ![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/example/circuitpython/deepsleep/deepsleep-b-cpy730-esp32s2.jpg)
 
 ![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/example/circuitpython/deepsleep/deepsleep-c-cpy730-esp32s2.jpg)
+
+## reset reason
+
+alarm.wake_alarm (usb or battery)
+* False = first boot or reset button
+* True = wakeup after deep sleep timeout or boot button
+
+microcontroller.cpu.reset_reason (only with battery)
+* microcontroller.ResetReason.***
+* .POWER_ON = first boot or reset button / usb connected
+* .DEEP_SLEEP_ALARM = wakeup after deep sleep or boot button / battery

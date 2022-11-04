@@ -19,10 +19,18 @@
 
 ## periode
 
+power consumption
+
 * 1262ms boot @ 38mA 171mW
 * 1000ms code @ 26mA 117mW
 * 8938ms sleep @ 58uA 261uW
-* 10s periode @ 7.45mA 34mW
+
+average consumption
+
+* 10sec periode = 7.45mA 34mW
+* 60sec periode = 1.29mA 5.8mW
+* 10min periode = 0.181mA 0.81mW
+* 60min periode = 0.079mA 0.35mW
 
 ![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/example/circuitpython/deepsleep/deepsleep-b-cpy730-esp32s2.jpg)
 

@@ -37,7 +37,7 @@ while True:
 	if val>avg:
 		max = (max+val)/2
 	gap = max-min
-	print(math.ceil(avg), math.ceil(min), math.ceil(max), math.ceil(gap))
+	print(math.ceil(avg), math.ceil(gap))
 	time.sleep(0.1)
 	# detect blinking light and turn led on
 	rnd = rnd+1
@@ -50,3 +50,4 @@ while True:
 		time.sleep(3.0)
 		led.deinit()
 		pin = analogio.AnalogIn(board.LED)
+

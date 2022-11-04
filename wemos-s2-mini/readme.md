@@ -26,6 +26,7 @@ builtin features
 * usb hid / storage (keyboard, memory)
 * flash memory (filesystem, logging)
 * temperature sensor
+* light / led sensor
 
 ## CircuitPython
 

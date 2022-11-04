@@ -1,8 +1,10 @@
-# LED as sensor
+# LED as light sensor
 
 * you can use the builtin led as a light sensor
 * every led produce voltage depend on light level
 * for WeMos S2 mini we use adc of GPIO15
+* messure light level and detect blinking 
+* shaking a flashlight simulates blinking light
 
 ## light pattern
 

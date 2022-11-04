@@ -19,14 +19,14 @@
 
 builtin features
 
-* push button as input (long, short)
-* blue led as output (blink, morse)
-* wifi access point / webserver (app)
+* push button as digital input (board.BUTTON)
+* blue led as digital output (board.LED)
+* blue led as analog light sensor (board.LED)
+* temp sensor (microcontroller.cpu.temperature)
+* wifi access point / webserver (webapp)
 * wifi station / mesh (iot)
-* usb hid / storage (keyboard, memory)
 * flash memory (filesystem, logging)
-* temperature sensor
-* light / led sensor
+* usb hid / storage (keyboard, memory)
 
 ## CircuitPython
 

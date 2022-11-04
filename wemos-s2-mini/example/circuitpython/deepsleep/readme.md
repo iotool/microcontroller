@@ -7,15 +7,22 @@
 ## execution
 
 * 5.7 Ohm resistor @ 4.11 VBUS
-* 140mV = 24.6mA / 84mV = 14.7mA
+* 24.6mA (140mV) / 14.7mA (84mV) with oszi
+* 38mA / 26mA with multimeter
 
 ![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/example/circuitpython/deepsleep/deepsleep-a-cpy730-esp32s2.jpg)
+
+* phase 1 = 500ms wait (boot-button)
+* phase 2 = 768ms init (rf calibration)
+* phase 3 = 1000ms code (circuit python)
+* phase 4 = 8938ms sleep
 
 ## periode
 
 * 1262ms boot @ 38mA 171mW
 * 1000ms code @ 26mA 117mW
 * 8938ms sleep @ 58uA 261uW
+* 10s periode @ 7.45mA 34mW
 
 ![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/example/circuitpython/deepsleep/deepsleep-b-cpy730-esp32s2.jpg)
 

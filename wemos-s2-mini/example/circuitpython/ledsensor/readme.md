@@ -12,3 +12,12 @@
 * blinking = high average and high oscillations
 
 ![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/example/circuitpython/ledsensor/led-as-sensor-wemos-s2-mini-esp32s2.png)
+
+## light sesnor
+
+* avg = average kpi
+* gap = oscillation kpi
+* min = low oscillation
+* max = high oscillation
+
+![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/example/circuitpython/ledsensor/led-as-sensor2-wemos-s2-mini-esp32s2.png)

@@ -76,26 +76,26 @@ GND -- |RST| +------- EN
 | - | 00 | Boot-Button |
 | 01 | 01 | ADC, Touch, RTC |
 | 02 | 02 | ADC, Touch, RTC |
-| 03 | 03 | ADC, Touch, RTC |
+| 03 | 03 | ADC, Touch, RTC, A0 |
 | 04 | 04 | ADC, Touch, RTC |
-| 05 | 05 | ADC, Touch, RTC |
+| 05 | 05 | ADC, Touch, RTC, D0 |
 | 06 | 06 | ADC, Touch, RTC |
-| 07 | 07 | ADC, Touch, RTC |
+| 07 | 07 | ADC, Touch, RTC, D5, SCK |
 | 08 | 08 | ADC, Touch, RTC |
-| 09 | 09 | ADC, Touch, RTC |
+| 09 | 09 | ADC, Touch, RTC, D6, MISO |
 | 10 | 10 | ADC, Touch, RTC |
-| 11 | 11 | ADC, Touch, RTC |
+| 11 | 11 | ADC, Touch, RTC, D7, MOSI |
 | 12 | 12 | ADC, Touch, RTC |
-| 13 | 13 | ADC, Touch, RTC |
+| 13 | 13 | ADC, Touch, RTC, D8 |
 | 14 | 14 | ADC, Touch, RTC |
-| 15 | 15 | LED - ADC, Touch, RTC |
-| 16 | 16 | ADC, Touch, RTC |
-| 17 | 17 | DAC, ADC, Touch, RTC |
-| 18 | 18 | DAC, ADC, Touch, RTC |
+| 15 | 15 | ADC, Touch, RTC, LED |
+| 16 | 16 | ADC, Touch, RTC, D4 |
+| 17 | 17 | ADC, Touch, RTC, DAC |
+| 18 | 18 | ADC, Touch, RTC, D3, DAC |
 | 21 | 21 | XTAL, ADC, Touch, RTC |
-| 33 | 33 | |
+| 33 | 33 | D2, SDA |
 | 34 | 34 | |
-| 35 | 35 | |
+| 35 | 35 | D1, SCL |
 | 36 | 36 | |
 | 37 | 37 | |
 | 38 | 38 | |

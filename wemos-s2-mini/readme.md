@@ -64,5 +64,5 @@ GND -- |Boot| ------ board.BUTTON ~IO0
 GND -- |< -- [2k] -- board.LED    ~IO15
 GND -- |Reset| ----- EN
     +- [10k] ------- 3V3
-3V3 --- [10k] ------ board.IO18   ~USB
+3V3 -- [10k] ------- board.IO18   ~USB
 ```

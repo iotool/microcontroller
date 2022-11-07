@@ -29,6 +29,10 @@ average consumption
 
 * 10sec periode = 7.45mA 34mW
 * 60sec periode = 1.29mA 5.8mW
+* 90sec periode = 0.88mA 3.95mW
+* 2min periode = 0.68mA 3.03mW
+* 3min periode = 0.47mA 2.11mW
+* 5min periode = 0.304mA 1.37mW
 * 10min periode = 0.181mA 0.81mW
 * 60min periode = 0.079mA 0.35mW
 

@@ -60,9 +60,9 @@ Deep Sleep
 ![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-b.jpg?raw=true)
 
 ```
-GND --- |Boot| ------ board.BUTTON   ~IO0
-GND --- |< -- [2k] -- board.LED      ~IO15
-GND --- |Reset| ----- EN
-     +- [10k] ------- 3V3
-3V3 --- [10k] ------- board.IO18     ~USB
+GND -- |Boot| ------ board.BUTTON ~IO0
+GND -- |< -- [2k] -- board.LED    ~IO15
+GND -- |Reset| ----- EN
+    +- [10k] ------- 3V3
+3V3 --- [10k] ------ board.IO18   ~USB
 ```

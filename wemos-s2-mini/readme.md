@@ -23,6 +23,7 @@ builtin features
 * blue led as digital output (board.LED)
 * blue led as analog light sensor (board.LED)
 * temp sensor (microcontroller.cpu.temperature)
+* vbat sensor (board.IO14)
 * wifi access point / webserver (webapp)
 * wifi station / mesh (iot)
 * flash memory (filesystem, logging)

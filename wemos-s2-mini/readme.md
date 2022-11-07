@@ -57,8 +57,6 @@ Deep Sleep
 
 ![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-a.jpg?raw=true)
 
-![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-b.jpg?raw=true)
-
 ```
 GND -- |Boot| ------- board.BUTTON ~IO0
 GND -- |< -- [2k] --- board.LED    ~IO15
@@ -66,3 +64,41 @@ GND -- |RST| +------- EN
              +-[10k]- 3V3
 3V3 -- [10k] -------- board.IO18   ~USB
 ```
+
+![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-b.jpg?raw=true)
+
+| PIN | IO | Comment |
+| --- | --- | --- |
+| 3.3V | 3V3 | VCC |
+| 5.0V | VBUS | VUSB |
+| GND | GND | Ground |
+| EN | EN | Reset-Button |
+| - | 00 | Boot-Button |
+| 01 | 01 | ADC, Touch, RTC |
+| 02 | 02 | ADC, Touch, RTC |
+| 03 | 03 | ADC, Touch, RTC |
+| 04 | 04 | ADC, Touch, RTC |
+| 05 | 05 | ADC, Touch, RTC |
+| 06 | 06 | ADC, Touch, RTC |
+| 07 | 07 | ADC, Touch, RTC |
+| 08 | 08 | ADC, Touch, RTC |
+| 09 | 09 | ADC, Touch, RTC |
+| 10 | 10 | ADC, Touch, RTC |
+| 11 | 11 | ADC, Touch, RTC |
+| 12 | 12 | ADC, Touch, RTC |
+| 13 | 13 | ADC, Touch, RTC |
+| 14 | 14 | ADC, Touch, RTC |
+| 15 | 15 | LED - ADC, Touch, RTC |
+| 16 | 16 | ADC, Touch, RTC |
+| 17 | 17 | DAC, ADC, Touch, RTC |
+| 18 | 18 | DAC, ADC, Touch, RTC |
+| 21 | 21 | XTAL, ADC, Touch, RTC |
+| 33 | 33 | |
+| 34 | 34 | |
+| 35 | 35 | |
+| 36 | 36 | |
+| 37 | 37 | |
+| 38 | 38 | |
+| 39 | 39 | |
+| 40 | 40 | |
+

@@ -93,7 +93,7 @@ GND -- |RST| +------- EN
 | 16 | 16 | ADC, Touch, RTC, D4 |
 | 17 | 17 | ADC, Touch, RTC, DAC |
 | 18 | 18 | ADC, Touch, RTC, D3, DAC |
-| 21 | 21 | XTAL, ADC, Touch, RTC |
+| 21 | 21 | ADC, Touch, RTC, XTAL |
 | 33 | 33 | D2, SDA |
 | 34 | 34 | |
 | 35 | 35 | D1, SCL |

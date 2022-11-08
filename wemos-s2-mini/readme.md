@@ -68,38 +68,38 @@ GND -- |RST| +------- EN
 
 ![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-b.jpg?raw=true)
 
-| PIN | IO | Comment |
-| --- | --- | --- |
-| 3.3V | 3V3 | VCC |
-| 5.0V | VBUS | VUSB |
-| GND | GND | Ground |
-| EN | EN | Reset-Button |
-| - | 00 | Boot-Button |
-| 01 | 01 | ADC, Touch, RTC |
-| 02 | 02 | ADC, Touch, RTC |
-| 03 | 03 | ADC, Touch, RTC, A0 |
-| 04 | 04 | ADC, Touch, RTC |
-| 05 | 05 | ADC, Touch, RTC, D0 |
-| 06 | 06 | ADC, Touch, RTC |
-| 07 | 07 | ADC, Touch, RTC, D5, SCK |
-| 08 | 08 | ADC, Touch, RTC |
-| 09 | 09 | ADC, Touch, RTC, D6, MISO |
-| 10 | 10 | ADC, Touch, RTC |
-| 11 | 11 | ADC, Touch, RTC, D7, MOSI |
-| 12 | 12 | ADC, Touch, RTC |
-| 13 | 13 | ADC, Touch, RTC, D8 |
-| 14 | 14 | ADC, Touch, RTC |
-| 15 | 15 | ADC, Touch, RTC, LED |
-| 16 | 16 | ADC, Touch, RTC, D4 |
-| 17 | 17 | ADC, Touch, RTC, DAC |
-| 18 | 18 | ADC, Touch, RTC, D3, DAC |
-| 21 | 21 | ADC, Touch, RTC, XTAL |
-| 33 | 33 | D2, SDA |
-| 34 | 34 | |
-| 35 | 35 | D1, SCL |
-| 36 | 36 | |
-| 37 | 37 | |
-| 38 | 38 | |
-| 39 | 39 | |
-| 40 | 40 | |
+| PIN | IO | D2 | Comment |
+| --- | --- | --- | --- |
+| 3.3V | 3V3 | 3V3 | VCC |
+| 5.0V | VBUS | 5V | VUSB |
+| GND | GND | GND | Ground |
+| EN | EN | RST| Reset-Button |
+| - | 00 | - | Boot-Button |
+| 01 | 01 | - |  ADC, Touch, RTC |
+| 02 | 02 | - | ADC, Touch, RTC |
+| 03 | 03 | A0 | ADC, Touch, RTC |
+| 04 | 04 | - | ADC, Touch, RTC |
+| 05 | 05 | D0 | ADC, Touch, RTC |
+| 06 | 06 | - | ADC, Touch, RTC |
+| 07 | 07 | D5 | ADC, Touch, RTC, SCK |
+| 08 | 08 | - | ADC, Touch, RTC |
+| 09 | 09 | D6 | ADC, Touch, RTC, MISO |
+| 10 | 10 | - | ADC, Touch, RTC |
+| 11 | 11 | D7 | ADC, Touch, RTC, MOSI |
+| 12 | 12 | D8 | ADC, Touch, RTC |
+| 13 | 13 | (D8) | ADC, Touch, RTC |
+| 14 | 14 | - | ADC, Touch, RTC |
+| 15 | 15 | - | ADC, Touch, RTC, LED |
+| 16 | 16 | D4 | ADC, Touch, RTC |
+| 17 | 17 | - | ADC, Touch, RTC, DAC |
+| 18 | 18 | D3 | ADC, Touch, RTC, D3, DAC |
+| 21 | 21 | - | ADC, Touch, RTC, XTAL |
+| 33 | 33 | D2 | SDA |
+| 34 | 34 | - | |
+| 35 | 35 | D1 | SCL |
+| 36 | 36 | - | |
+| 37 | 37 | RX | |
+| 38 | 38 | - | |
+| 39 | 39 | TX | |
+| 40 | 40 | - | |
 

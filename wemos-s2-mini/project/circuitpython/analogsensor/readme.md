@@ -3,4 +3,4 @@
 * LDR light
 * NTC temperature
 
-![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-sensor-addon-pinout.jpg?raw=true)
+![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/project/circuitpython/analogsensor/wemos-s2-mini-sensor-addon-pinout.jpg)

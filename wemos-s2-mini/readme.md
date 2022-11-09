@@ -56,6 +56,8 @@ Deep Sleep
 
 ## Photo
 
+![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/wemos-s2-mini-esp32s2-pinout.jpg)
+
 ![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-a.jpg?raw=true)
 
 ```
@@ -65,10 +67,7 @@ GND -- |RST| +------- EN
              +-[10k]- 3V3
 3V3 -- [10k] -------- board.IO18   ~USB
 ```
-
 ![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-b.jpg?raw=true)
-
-![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/wemos-s2-mini-esp32s2-pinout.jpg)
 
 | PIN | IO | D2 | Comment |
 | --- | --- | --- | --- |

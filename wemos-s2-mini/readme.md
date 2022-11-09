@@ -68,6 +68,8 @@ GND -- |RST| +------- EN
 
 ![](https://github.com/iotool/microcontroller/blob/main/wemos-s2-mini/wemos-s2-mini-v100-b.jpg?raw=true)
 
+![](https://raw.githubusercontent.com/iotool/microcontroller/main/wemos-s2-mini/wemos-s2-mini-esp32s2-pinout.jpg)
+
 | PIN | IO | D2 | Comment |
 | --- | --- | --- | --- |
 | 3.3V | 3V3 | 3V3 | VCC |

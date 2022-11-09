@@ -2,13 +2,14 @@
 # 
 # IO18 -- LDR -- IO34  light
 # IO17 -- NTC -- IO36  temperature
-# IO15 -- 10k -- IO17  voltage
+# IO15 -- 20k -- IO17  voltage
 
 import time
 import board
 import digitalio
 import analogio
 import math
+import storage
 
 def readTemperature():
   p17s = analogio.AnalogIn(board.IO17)
@@ -33,7 +34,7 @@ def readTemperature():
   p36v.deinit()
   p17s.deinit()
   # scaling -40..80 C
-  rco  = 10000  # ohm 10040
+  rco  = 20000  # ohm 10040
   t25  = 298.15 # K
   r25  = 10000  # ohm 9970
   beta = 3950   # K 3119
@@ -83,8 +84,8 @@ def readVoltage():
   p17v = digitalio.DigitalInOut(board.IO17)
   p17v.direction = digitalio.Direction.INPUT
   p17v.pull = digitalio.Pull.UP
-  p17v.direction = digitalio.Direction.OUTPUT
-  p17v.value = True
+  #p17v.direction = digitalio.Direction.OUTPUT
+  #p17v.value = True
   time.sleep(0.01)
   n = 5
   val = 0
@@ -96,15 +97,26 @@ def readVoltage():
   p36n.deinit()
   p15s.deinit()
   # scaling 3.00..3.31 V
-  sla = 52893   # adc
-  slv = 3.04    # v
-  sha = 52784   # adc
-  shv = 3.31    #
-  sda = sla-sha # 109
-  sdv = shv-slv # 0.27
+  sla = 50429   # adc    52893  50429
+  slv = 3.09    # v      3.04   3.09
+  sha = 50100   # adc    52784
+  shv = 3.31    # v      3.31
+  sda = sla-sha #        109
+  sdv = shv-slv #        0.27
   vin = shv-sdv/sda*(v15-sha)
   v15 = vin
   return v15
+
+logging = False
+
+if logging:
+  try:
+    with open("/datalog.txt", "a") as fp:
+      fp.write('reset\n')
+      fp.flush()
+      fp.close()
+  except OSError as e:
+    print("error log file")
 
 while True:
   vBat = readVoltage()
@@ -113,8 +125,17 @@ while True:
   print(vBat,vTmp,vLgt)
   led = digitalio.DigitalInOut(board.LED)
   led.direction = digitalio.Direction.OUTPUT
-  #led.value = True
-  #time.sleep(0.1)
   led.value = False
-  time.sleep(1)
+  if logging:
+    try:
+      with open("/datalog.txt", "a") as fp:
+        fp.write('{0:f} '.format(vBat))
+        fp.write('{0:f} '.format(vTmp))
+        fp.write('{0:f}\n'.format(vLgt))
+        fp.flush()
+        fp.close()
+    except OSError as e:
+      print("error log file")
+    time.sleep(5)
   led.deinit()
+  time.sleep(0.1)

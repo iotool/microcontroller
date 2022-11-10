@@ -2,7 +2,9 @@
 # 
 # IO18 -- LDR -- IO34  light
 # IO17 -- NTC -- IO36  temperature
-# IO15 -- 20k -- IO17  voltage
+# IO15 -- 10k -- IO17  voltage
+# GND  -- 470k-- IO16  battery
+# 5V   -- 680k-- IO16  battery
 
 import time
 import board
@@ -10,6 +12,7 @@ import digitalio
 import analogio
 import math
 import storage
+import alarm
 
 def readTemperature():
   p17s = analogio.AnalogIn(board.IO17)
@@ -34,7 +37,7 @@ def readTemperature():
   p36v.deinit()
   p17s.deinit()
   # scaling -40..80 C
-  rco  = 20000  # ohm 10040
+  rco  = 10000  # ohm 10040
   t25  = 298.15 # K
   r25  = 10000  # ohm 9970
   beta = 3950   # K 3119
@@ -87,7 +90,7 @@ def readVoltage():
   #p17v.direction = digitalio.Direction.OUTPUT
   #p17v.value = True
   time.sleep(0.01)
-  n = 5
+  n = 10
   val = 0
   for i in range(n):
     val = val + p15s.value
@@ -97,19 +100,40 @@ def readVoltage():
   p36n.deinit()
   p15s.deinit()
   # scaling 3.00..3.31 V
-  sla = 50429   # adc    52893  50429
+  sla = 50906   # adc    52893  50429
   slv = 3.09    # v      3.04   3.09
-  sha = 50100   # adc    52784
-  shv = 3.31    # v      3.31
+  sha = 51015   # adc    52784
+  shv = 3.315   # v      3.31
   sda = sla-sha #        109
   sdv = shv-slv #        0.27
   vin = shv-sdv/sda*(v15-sha)
   v15 = vin
   return v15
 
-logging = False
+p16s = analogio.AnalogIn(board.IO16)
 
-if logging:
+def readBattery():
+  global p16s 
+  #-- p16s = analogio.AnalogIn(board.IO16)
+  n = 10
+  val = 0
+  for i in range(n):
+    val = val + p16s.value
+    time.sleep(0.01)
+  v16 = math.ceil(val/n)
+  #-- p16s.deinit()
+  # scaling 6.65 V
+  srl = 476000   # kOhm
+  srh = 684000   # kOhm
+  ul = v16/53619*3.1173
+  uh = ul*(srl+srh)/srl
+  v16 = ul
+  v16 = uh
+  return v16
+
+logging = True
+
+if not alarm.wake_alarm and logging:
   try:
     with open("/datalog.txt", "a") as fp:
       fp.write('reset\n')
@@ -118,11 +142,13 @@ if logging:
   except OSError as e:
     print("error log file")
 
-while True:
-  vBat = readVoltage()
+# while True:
+if True:
+  vBat = readBattery()
+  vVcc = readVoltage()
   vTmp = readTemperature()
   vLgt = readLight()
-  print(vBat,vTmp,vLgt)
+  print(vBat,vVcc,vTmp,vLgt)
   led = digitalio.DigitalInOut(board.LED)
   led.direction = digitalio.Direction.OUTPUT
   led.value = False
@@ -130,6 +156,7 @@ while True:
     try:
       with open("/datalog.txt", "a") as fp:
         fp.write('{0:f} '.format(vBat))
+        fp.write('{0:f} '.format(vVcc))
         fp.write('{0:f} '.format(vTmp))
         fp.write('{0:f}\n'.format(vLgt))
         fp.flush()
@@ -139,3 +166,7 @@ while True:
     time.sleep(5)
   led.deinit()
   time.sleep(0.1)
+
+time_alarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + 58.938)
+pin_alarm = alarm.pin.PinAlarm(pin=board.BUTTON, value=False, pull=True)
+alarm.exit_and_deep_sleep_until_alarms(time_alarm, pin_alarm)

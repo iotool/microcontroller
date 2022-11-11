@@ -3,6 +3,12 @@
 * detect up to 28 devices via network ping
 * upload result to thingspeak.com
 
+## setup static ip address
+
+* disable random mac at smartphone for your wifi network
+* enable static ip address for monitored devices
+* map static ip address to thingspeak field 1..7 and value 1,2,4,8
+
 ## setup thinkspeak
 
 * create account and channel
